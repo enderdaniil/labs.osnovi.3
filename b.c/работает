@@ -1,0 +1,27 @@
+#include <stdio.h>
+int main()
+{
+    int strn[256]={ 0 }; // массив для значнения аски
+    char str[2141000]; // массив для массива символов люб длины
+        gets(str); 
+        puts(str); // получение и запись строки в массив str
+    int i=0; // counter
+    int b;   // element of number
+    while (str[i]!='\0')
+    {
+        b=(int)str[i];
+        strn[b]+=1;
+        i++;
+    } // нахождение колва всех знаков
+    char f; // переменная знака ascii
+    for (int j=0; j<255; j++)
+    {
+        if (strn[j]!=0)
+        {
+            char f=(char)j;
+            printf("%c = %d\n", f, strn[j]);  // вывод
+        }
+    }
+
+    return 0;
+}
