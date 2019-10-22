@@ -3,8 +3,8 @@ int main()
 {
     printf("Input size\n");
     int a,b,s;
-    float arr[a][b];
     scanf("%d%d",&a,&b);
+    int arr[a][b];
     printf("Input skaliar\n");
     scanf("%d",&s);
     printf("Input matricu\n");
@@ -12,7 +12,7 @@ int main()
     {
         for (int j=0; j<b; j++)
         {
-            scanf("%lf",arr[i][j]);
+            scanf("%d", &arr[i][j]);
             arr[i][j]*=s;
         }
     }
@@ -20,7 +20,7 @@ int main()
     {
         for (int j=0; j<b; j++)
         {
-            printf("%lf",arr[i][j]);
+            printf("%d ",arr[i][j]);
         }
         printf("\n");
     }
